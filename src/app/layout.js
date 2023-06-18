@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className={`${bodoni_moda.variable} ${barlow.variable}`}>
-      <body className='bg-primary text-secondary'>{children}</body>
+      <body className='bg-primary text-secondary font-sans'>{children}</body>
     </html>
   );
 }

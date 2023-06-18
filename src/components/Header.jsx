@@ -1,10 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className='flex justify-center items-center h-32 min-w-screen px-10 gap-10'>
-      <div className='flex flex-grow justify-start items-center relative'>
+    <header className='flex justify-center items-center xl:h-32 min-w-screen px-10 gap-10'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        transition={{ all: "0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s" }}
+        whileInView={{ opacity: 1 }}
+        className='flex flex-grow justify-start items-center relative'
+      >
         <div className='flex-grow'>
           <svg
             width='100%'
@@ -19,12 +27,16 @@ const Header = () => {
               x2='100%'
               y2='100'
               stroke='#F10E0E'
-              stroke-width='20'
+              stroke-width='10'
             />
           </svg>
         </div>
-      </div>
-      <div className='flex items-center justify-center'>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className='flex items-center justify-center'
+      >
         <Image
           src='/Logo/STEPHSBEAUTYBAR.png'
           alt='Steph’s Beauty Bar Logo'
@@ -32,8 +44,12 @@ const Header = () => {
           height={200}
           objectFit='contain'
         />
-      </div>
-      <div className='flex flex-grow justify-end items-center relative'>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className='flex flex-grow justify-end items-center relative'
+      >
         <div className='flex-grow'>
           <svg
             width='100%'
@@ -48,11 +64,11 @@ const Header = () => {
               x2='100%'
               y2='100'
               stroke='#F10E0E'
-              stroke-width='20'
+              stroke-width='10'
             />
           </svg>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };
