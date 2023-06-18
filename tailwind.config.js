@@ -6,5 +6,21 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-barlow)"],
+        serif: ["var(--font-bodoni)"],
+      },
+      colors: {
+        primary: "#FFFEEE",
+        secondary: "#F10E0E",
+        secondaryFocus: "#600606",
+      },
+    },
+  },
+
+  daisyui: {},
+
   plugins: [require("daisyui")],
 };

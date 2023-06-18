@@ -1,7 +1,17 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Bodoni_Moda, Barlow } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const bodoni_moda = Bodoni_Moda({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-bodoni",
+});
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-barlow",
+});
 
 export const metadata = {
   title: "Steph's Beauty Bar",
@@ -10,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={`${inter.className}`}>{children}</body>
+    <html lang='en' className={`${bodoni_moda.variable} ${barlow.variable}`}>
+      <body className='bg-primary text-secondary'>{children}</body>
     </html>
   );
 }
