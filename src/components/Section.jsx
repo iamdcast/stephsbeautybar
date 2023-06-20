@@ -7,22 +7,22 @@ import Ticker from "framer-motion-ticker";
 const imagesUrl = [
   "/ticker/IMG_5737.JPEG",
   "/ticker/582BBE61-E7F4-47A0-A2C4-6CB6F81948A8.JPEG",
+  "/ticker/IMG_5743.JPEG",
+  "/ticker/IMG_7923.JPEG",
+  "/ticker/IMG_8343.JPEG",
 ];
 
-const newImage = () => {
-  return (
+const images = imagesUrl.map((url, index) => (
+  <div key={index} className='h-full w-full relative'>
     <Image
-      src={imagesUrl.map(value)}
+      src={url}
       alt='Steph’s Beauty Bar Logo'
-      width={200}
-      height={200}
+      fill // this property will make the image to fill its parent div
+      // this will ensure that the image's aspect ratio is preserved while it fills the parent div
     />
-  );
-};
-
+  </div>
+));
 const imageFilter = [];
-
-const images = ["11", "2"];
 
 const Section = () => {
   return (
@@ -55,18 +55,19 @@ const Section = () => {
           Our Services
         </a>
       </div>
-      <div className='flex w-full h-full justify-center items-center border border-secondary '>
-        <Ticker duration={5}>
+      <div className='flex w-full h-full justify-center items-center'>
+        <Ticker duration={15} className='z-0'>
           {images.map((item, index) => (
             <div
               key={index}
-              className=' aspect-square min-h-fit m-3 w-96 rounded-3xl border-secondary border bg-opacity-60 bg-white'
-              style={{
-                backgroundColor: item,
-              }}
-            />
+              className='aspect-square min-h-fit m-3 w-96 rounded-3xl bg-opacity-60 bg-white overflow-hidden'
+            >
+              {item}
+            </div>
           ))}
         </Ticker>
+        <div className='absolute bottom-0 left-0 h-1/2 w-1/6 bg-gradient-to-r from-primary to-transparent mx-36' />
+        <div className='absolute bottom-0 right-0 h-1/2 w-1/6 bg-gradient-to-l from-primary to-transparent mx-36' />
       </div>
     </motion.section>
   );
