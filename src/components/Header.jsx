@@ -42,7 +42,7 @@ const Header = () => {
           alt='Steph’s Beauty Bar Logo'
           width={200}
           height={200}
-          objectFit='contain'
+          contain
         />
       </motion.div>
       <motion.div

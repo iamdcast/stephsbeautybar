@@ -12,14 +12,15 @@ const imagesUrl = [
   "/ticker/IMG_8343.JPEG",
 ];
 
+const maskShapes = [
+  '<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_238_1284)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 0H0V100C0 155.228 44.7715 200 100 200C155.228 200 200 155.228 200 100V0H150C122.386 0 100 22.3858 100 50C100 22.3858 77.6142 0 50 0Z" fill="url(#paint0_linear_238_1284)"/> </g> <defs> <linearGradient id="paint0_linear_238_1284" x1="100" y1="0" x2="100" y2="200" gradientUnits="userSpaceOnUse"> <stop stop-color="#A7B5FF"/> <stop offset="1" stop-color="#F3ACFF"/> </linearGradient> <clipPath id="clip0_238_1284"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>',
+  '<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_221_10)"> <path d="M0 0H100C155.228 0 200 44.7715 200 100V200H100C44.7715 200 0 155.228 0 100V0Z" fill="url(#paint0_linear_221_10)"/> </g> <defs> <linearGradient id="paint0_linear_221_10" x1="100" y1="0" x2="100" y2="200" gradientUnits="userSpaceOnUse"> <stop stop-color="#A7B5FF"/> <stop offset="1" stop-color="#F3ACFF"/> </linearGradient> <clipPath id="clip0_221_10"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>',
+  '<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0 47.4235C0 38.0237 6.53608 29.9057 15.7703 28.1488C36.4827 24.2081 73.3424 18 100 18C126.658 18 163.517 24.2081 184.23 28.1488C193.464 29.9057 200 38.0237 200 47.4235V150.374C200 159.424 193.931 167.333 185.12 169.396C164.683 174.181 127.351 181.934 100 181.934C72.6487 181.934 35.3172 174.181 14.8798 169.396C6.06883 167.333 0 159.424 0 150.374V47.4235Z" fill="url(#paint0_linear_105_435)"/> <defs> <linearGradient id="paint0_linear_105_435" x1="100" y1="18" x2="100" y2="181.934" gradientUnits="userSpaceOnUse"> <stop stop-color="#A7B5FF"/> <stop offset="1" stop-color="#F3ACFF"/> </linearGradient> </defs> </svg>',
+];
+
 const images = imagesUrl.map((url, index) => (
-  <div key={index} className='h-full w-full relative'>
-    <Image
-      src={url}
-      alt='Steph’s Beauty Bar Logo'
-      fill // this property will make the image to fill its parent div
-      // this will ensure that the image's aspect ratio is preserved while it fills the parent div
-    />
+  <div key={index} className='h-full w-full relative bg-cli'>
+    <Image src={url} alt='Steph’s Beauty Bar Logo' fill />
   </div>
 ));
 const imageFilter = [];
@@ -56,7 +57,7 @@ const Section = () => {
         </a>
       </div>
       <div className='flex w-full h-full justify-center items-center'>
-        <Ticker duration={15} className='z-0'>
+        <Ticker duration={20} className='z-0'>
           {images.map((item, index) => (
             <div
               key={index}
