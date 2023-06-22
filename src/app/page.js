@@ -9,8 +9,8 @@ export default function Home() {
         <Section />
       </div>
 
-      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-        <h1 className='font-serif text-secondary'>UNVIEL YOUR GLOW</h1>
+      <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-secondary'>
+        <h1 className='font-serif text-primary'>UNVIEL YOUR GLOW</h1>
       </main>
       <footer></footer>
     </>
