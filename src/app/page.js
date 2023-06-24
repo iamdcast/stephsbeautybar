@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Section from "@/components/Section";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       </div>
 
       <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-secondary'>
-        <h1 className='font-serif text-primary'>UNVIEL YOUR GLOW</h1>
+        <Services />
       </main>
       <footer></footer>
     </>
