@@ -2,122 +2,129 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div
-      className={`inline-flex h-[1507px] w-[1729px] flex-col items-start bg-secondary px-[140px] py-5 text-left text-primary`}
-    >
-      <div className='flex w-[1449px] flex-col items-start gap-2.5 self-stretch py-10 font-light'>
-        <p className='w-[568px] text-[59.13px] leading-[85.13px] tracking-[-2.13px]'>
-          Our Amazing Services
-        </p>
-      </div>
-      <div className='flex w-[1449px] flex-grow items-start justify-between gap-20 self-stretch px-10 pt-10'>
-        <div className='flex flex-grow flex-col items-start gap-10 px-5'>
-          <div className='h-0.5 w-full bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[401px] items-center justify-between gap-[37px] pr-[81px]'>
-              <p className='h-[23px] w-[22px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                01
-              </p>
-              <p className='h-[53px] w-[261px] flex-grow text-[36.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                Brow Lamination
-              </p>
-            </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Achieve fuller, perfectly groomed brows that stay in place for
-                up to 8 weeks.
-              </p>
-            </div>
+    <div className='w-[1729px] h-[1506.50px] px-[140px] py-5 flex-col justify-start items-start gap-2.5 inline-flex'>
+      <div className='self-stretch h-[1137.03px] flex-col justify-start items-start flex'>
+        <div className='self-stretch h-[166px] py-10 flex-col justify-start items-start gap-2.5 flex'>
+          <div className='text-amber-50 text-[59.13019943237305px] font-light leading-10'>
+            Our Amazing Services
           </div>
-          <div className='h-0.5 w-full bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[325px] items-center justify-between gap-[37px] pr-[108px]'>
-              <p className='h-[23px] w-[25px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                03
-              </p>
-              <p className='h-[53px] w-[155px] flex-grow text-[38.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                Lip Fillers
-              </p>
-            </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Add volume and definition to your lips for a stunning and
-                youthful pout.
-              </p>
-            </div>
-          </div>
-          <div className='h-[2.03px] w-full bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[249px] items-center justify-between gap-[37px]'>
-              <p className='h-[23px] w-[25px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                05
-              </p>
-              <p className='h-[53px] w-[187px] flex-grow text-[36.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                Certified Experts
-              </p>
-            </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Our skilled professionals use the latest techniques to deliver
-                stunning results.
-              </p>
-            </div>
-          </div>
-          <div className='h-0.5 w-full bg-[#FFFEEF]' />
         </div>
-        <div className='flex flex-grow flex-col items-start gap-10 px-5'>
-          <div className='h-0.5 w-full bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[401px] items-center justify-between gap-[34px] pr-[145px]'>
-              <p className='h-[23px] w-[25px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                02
-              </p>
-              <p className='h-[53px] w-[197px] flex-grow text-[36.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                Brow Tinting
-              </p>
+        <div className='self-stretch py-10 justify-start items-start gap-2.5 inline-flex'>
+          <div className='w-[684.50px] self-stretch px-5 flex-col justify-start items-start gap-10 inline-flex'>
+            <div className='self-stretch h-0.5 bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='pr-[324.81px] justify-start items-center gap-[36.69px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  01
+                </div>
+                <div className='text-amber-50 text-[36.012699127197266px] font-light leading-10'>
+                  Brow Lamination
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  Achieve fuller, perfectly groomed brows that stay in place for
+                  up to 8 weeks.
+                </div>
+              </div>
             </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Enhance your natural eyebrows with our long-lasting,
-                smudge-proof tint.
-              </p>
+            <div className='self-stretch h-0.5 bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='w-[644.50px] pr-[427.97px] justify-start items-center gap-[36.53px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  03
+                </div>
+                <div className='text-amber-50 text-[38.012699127197266px] font-light leading-10'>
+                  Lip Fillers
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  Add volume and definition to your lips for a stunning and
+                  youthful pout.
+                </div>
+              </div>
+            </div>
+            <div className='self-stretch h-[2.03px] bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='pr-[318.33px] justify-start items-center gap-[37.17px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  05
+                </div>
+                <div className='text-amber-50 text-[36.012699127197266px] font-light leading-10'>
+                  Certified Experts
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  Our skilled professionals use the latest techniques to deliver
+                  stunning results.
+                </div>
+              </div>
+            </div>
+            <div className='self-stretch h-0.5 bg-amber-50' />
+          </div>
+          <div className='w-[684.50px] self-stretch px-5 flex-col justify-start items-start gap-10 inline-flex'>
+            <div className='self-stretch h-0.5 bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='pr-[388.81px] justify-start items-center gap-[33.69px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  02
+                </div>
+                <div className='text-amber-50 text-[36.012699127197266px] font-light leading-10'>
+                  Brow Tinting
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  Enhance your natural eyebrows with our long-lasting,
+                  smudge-proof tint.
+                </div>
+              </div>
+            </div>
+            <div className='self-stretch h-0.5 bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='pr-[358.97px] justify-start items-center gap-[36.53px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  04
+                </div>
+                <div className='text-amber-50 text-[38.012699127197266px] font-light leading-10'>
+                  Easy Booking
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  Schedule your treatment online in a few quick clicks and
+                  prepare for fabulous results.
+                </div>
+              </div>
+            </div>
+            <div className='w-[540px] h-[2.03px] bg-amber-50' />
+            <div className='self-stretch h-[159px] flex-col justify-start items-start gap-3 flex'>
+              <div className='pr-[204.33px] justify-start items-center gap-[37.17px] inline-flex'>
+                <div className='text-amber-50 text-[20.3174991607666px] font-normal uppercase leading-snug'>
+                  06
+                </div>
+                <div className='text-amber-50 text-[36.012699127197266px] font-light leading-10'>
+                  Satisfaction Guaranteed
+                </div>
+              </div>
+              <div className='self-stretch py-1.5 justify-start items-start gap-2.5 inline-flex'>
+                <div className='grow shrink basis-0 text-amber-50 text-[24px] font-light leading-10'>
+                  We’re more than just beauty: we’re committed to helping you
+                  feel fabulous.
+                </div>
+              </div>
+            </div>
+            <div className='w-[540px] h-0.5 bg-amber-50' />
+          </div>
+        </div>
+        <div className='self-stretch h-[166px] py-10 flex-col justify-center items-center gap-2.5 flex'>
+          <div className='flex-col justify-start items-center gap-2.5 flex'>
+            <div className='text-amber-50 text-[59.13019943237305px] font-light leading-10'>
+              Ready Yet?
             </div>
           </div>
-          <div className='h-0.5 w-full bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[325px] items-center justify-between gap-[37px] pr-[39px]'>
-              <p className='h-[23px] w-[25px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                04
-              </p>
-              <p className='h-[53px] w-56 flex-grow text-[38.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                Easy Booking
-              </p>
-            </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Schedule your treatment online in a few quick clicks and prepare
-                for fabulous results.
-              </p>
-            </div>
-          </div>
-          <div className='h-[2.03px] w-[540px] bg-[#FFFEEF]' />
-          <div className='flex w-full flex-col items-start gap-3 self-stretch'>
-            <div className='flex h-[53px] w-[249px] items-center justify-between gap-[37px]'>
-              <p className='h-[23px] w-[25px] text-[20.32px] font-normal uppercase leading-[22.35px] tracking-[-0.81px]'>
-                03
-              </p>
-              <p className='h-[53px] w-[187px] flex-grow text-[36.01px] font-light leading-[52.01px] tracking-[-1.3px]'>
-                LIP FILLERS
-              </p>
-            </div>
-            <div className='flex w-full items-start gap-2.5 self-stretch py-1.5 font-light'>
-              <p className='w-[645px] flex-grow text-2xl leading-[40.51px] tracking-[-1.3px]'>
-                Enhance your natural eyebrows with our long-lasting,
-                smudge-proof tint.
-              </p>
-            </div>
-          </div>
-          <div className='h-0.5 w-[540px] bg-[#FFFEEF]' />
         </div>
       </div>
     </div>
