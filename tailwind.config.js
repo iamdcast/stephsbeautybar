@@ -17,6 +17,11 @@ module.exports = {
         secondary: "#F10E0E",
         secondaryFocus: "#600606",
       },
+      screens: {
+        sm: "0px",
+        md: "750px",
+        lg: "1200px",
+      },
     },
   },
 

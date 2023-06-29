@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 export default function Home() {
   return (
     <>
-      <div className='h-screen flex flex-col xl:py-5 xl:px-36 w-screen-xl '>
+      <div className='h-screen flex flex-col xl:py-5 md:px-24 px-5 w-screen-xl '>
         <Header />
         <Section />
       </div>

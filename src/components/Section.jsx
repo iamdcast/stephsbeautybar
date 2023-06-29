@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Ticker from "framer-motion-ticker";
+import { useInView } from "react-intersection-observer";
 
 const imagesUrl = [
   "/ticker/IMG_5737.JPEG",
@@ -23,40 +24,73 @@ const images = imagesUrl.map((url, index) => (
     <Image src={url} alt='Steph’s Beauty Bar Logo' fill />
   </div>
 ));
-const imageFilter = [];
 
 const Section = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 5 } },
+  };
+
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      transition={{
-        duration: 0.5,
-      }}
-      whileInView={{ opacity: 1 }}
+      ref={ref}
+      variants={containerVariants}
+      initial='hidden'
+      animate={inView ? "show" : "hidden"}
       className='w-full h-full flex flex-col items-center py-8 gap-3'
     >
-      <div className='text-center'>
-        <h1 className=' font-serif text-9xl'>UNVIEL YOUR GLOW</h1>
-      </div>
-      <div className='text-center px-44'>
-        <p className=' text-2xl'>
-          Unleash your inner radiance with Steph’s Beauty Bar, the ultimate
-          destination for premium eyebrow lamination and lip filler services.
-          Experience the liberation of your natural beauty, magnified.
-        </p>
-      </div>
-      <div className='flex items-center h-fit gap-5 py-5'>
-        <a
-          className='btn btn-outline btn-wide text-secondary hover:bg-secondary hover:text-white hover:border-secondary font-normal'
-          href='https://stephsbeautybar.setmore.com'
+      <motion.div
+        className='flex flex-col justify-center max-w-[2000px] content-center gap-7 flex-nowrap'
+        variants={itemVariants}
+      >
+        <motion.div
+          className='text-center w-full max-w-[1600px] relative font-serif lg:text-9xl md:text-8xl text-6xl h-auto '
+          variants={itemVariants}
         >
-          Book Now
-        </a>
-        <a className='btn btn-outline text-secondary btn-wide hover:bg-secondary hover:text-white hover:border-secondary font-normal'>
-          Our Services
-        </a>
-      </div>
-      <div className='flex w-full h-full justify-center items-center'>
+          <h1>Unviel Your Glow</h1>
+        </motion.div>
+        <motion.div
+          className='text-center text-2xl break-words whitespace-pre-wrap w-full'
+          variants={itemVariants}
+        >
+          <p>
+            Unleash your inner radiance with Steph’s Beauty Bar, the ultimate
+            destination for premium eyebrow lamination and lip filler services.
+            Experience the liberation of your natural beauty, magnified.
+          </p>
+        </motion.div>
+        <motion.div
+          className='flex items-center justify-center w-full h-min md:flex-row flex-col gap-5 flex-nowrap content-center'
+          variants={itemVariants}
+        >
+          <a
+            className='btn btn-outline btn-block md:btn-wide text-secondary hover:bg-secondary hover:text-white hover:border-secondary font-normal'
+            href='https://stephsbeautybar.setmore.com'
+          >
+            Book Now
+          </a>
+          <a className='btn btn-outline btn-block text-secondary md:btn-wide hover:bg-secondary hover:text-white hover:border-secondary font-normal'>
+            Our Services
+          </a>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className='relative w-full h-full justify-center items-center overflow-hidden'
+        variants={itemVariants}
+      >
         <Ticker duration={20} className='z-0'>
           {images.map((item, index) => (
             <div
@@ -67,9 +101,9 @@ const Section = () => {
             </div>
           ))}
         </Ticker>
-        <div className='absolute bottom-0 left-0 h-1/2 w-1/6 bg-gradient-to-r from-primary to-transparent mx-36' />
-        <div className='absolute bottom-0 right-0 h-1/2 w-1/6 bg-gradient-to-l from-primary to-transparent mx-36' />
-      </div>
+        <div className='absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-primary to-transparent' />
+        <div className='absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-primary to-transparent' />
+      </motion.div>
     </motion.section>
   );
 };

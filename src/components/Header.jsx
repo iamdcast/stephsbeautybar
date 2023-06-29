@@ -2,18 +2,40 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Header = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  });
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 3 } },
+  };
+
   return (
-    <header className='flex justify-center items-center xl:h-32 min-w-screen px-10 gap-10'>
+    <header
+      ref={ref}
+      className='md:flex md:justify-center md:items-center md:flex-row md:h-min md:gap-5 min-w-screen flex-shrink-0 '
+    >
       <motion.div
-        initial={{ opacity: 0 }}
-        transition={{ all: "0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s" }}
-        whileInView={{ opacity: 1 }}
+        variants={containerVariants}
+        initial='hidden'
+        animate={inView ? "show" : "hidden"}
         className='flex flex-grow justify-start items-center relative'
       >
-        <div className='flex-grow'>
+        <motion.div className='flex-grow' variants={itemVariants}>
           <svg
             width='100%'
             height='100%'
@@ -27,15 +49,16 @@ const Header = () => {
               x2='100%'
               y2='100'
               stroke='#F10E0E'
-              stroke-width='10'
+              strokeWidth={9}
             />
           </svg>
-        </div>
+        </motion.div>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className='flex items-center justify-center'
+        variants={itemVariants}
+        initial='hidden'
+        animate={inView ? "show" : "hidden"}
+        className='flex items-center justify-center min-w-[200px] min-h-[78px] '
       >
         <Image
           src='/Logo/STEPHSBEAUTYBAR.png'
@@ -46,11 +69,12 @@ const Header = () => {
         />
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={containerVariants}
+        initial='hidden'
+        animate={inView ? "show" : "hidden"}
         className='flex flex-grow justify-end items-center relative'
       >
-        <div className='flex-grow'>
+        <motion.div className='flex-grow' variants={itemVariants}>
           <svg
             width='100%'
             height='100%'
@@ -64,10 +88,10 @@ const Header = () => {
               x2='100%'
               y2='100'
               stroke='#F10E0E'
-              stroke-width='10'
+              strokeWidth={9}
             />
           </svg>
-        </div>
+        </motion.div>
       </motion.div>
     </header>
   );
