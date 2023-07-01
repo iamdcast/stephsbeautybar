@@ -20,7 +20,7 @@ const maskShapes = [
 ];
 
 const images = imagesUrl.map((url, index) => (
-  <div key={index} className='h-full w-full relative bg-cli'>
+  <div key={index} className='h-full w-full relative object-contain'>
     <Image src={url} alt='Steph’s Beauty Bar Logo' fill />
   </div>
 ));
@@ -50,10 +50,10 @@ const Section = () => {
       variants={containerVariants}
       initial='hidden'
       animate={inView ? "show" : "hidden"}
-      className='w-full h-full overflow-hidden flex flex-col items-center md:py-8 py-2 gap-5'
+      className='relative w-full h-full  flex flex-col justify-between items-center md:py-8 py-2 gap-5'
     >
       <motion.div
-        className='flex flex-col justify-center max-w-[2000px] content-center gap-4 md:gap-7 flex-nowrap'
+        className='flex flex-col h-full item-center justify-between max-w-[2000px] content-center gap-4 md:gap-7 flex-nowrap'
         variants={itemVariants}
       >
         <motion.div
@@ -63,7 +63,7 @@ const Section = () => {
           <h1>Unviel Your Glow</h1>
         </motion.div>
         <motion.div
-          className='text-center text-xl md:text-2xl break-words whitespace-pre-wrap w-full'
+          className='text-center text-lg md:text-2xl break-words whitespace-pre-wrap w-full'
           variants={itemVariants}
         >
           <p>
@@ -88,17 +88,14 @@ const Section = () => {
         </motion.div>
       </motion.div>
       <motion.div
-        className='relative w-full h-min justify-center items-center overflow-hidden'
+        className='relative w-full h-full flex  justify-center items-center'
         variants={itemVariants}
       >
-        <Ticker
-          duration={20}
-          className='z-0 flex w-min h-min gap-3 flex-row overflow-hidden relative content-center'
-        >
+        <Ticker duration={20} className='z-0 flex h-full relative '>
           {images.map((item, index) => (
             <div
               key={index}
-              className='aspect-square h-min w-96 m-3 rounded-3xl bg-opacity-60 bg-white overflow-hidden'
+              className='aspect-square  flex flex-grow justify-center mx-3 h-full md:w-96 max-w-96 w-64 rounded-3xl bg-opacity-60 bg-white overflow-hidden'
             >
               {item}
             </div>
