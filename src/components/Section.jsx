@@ -50,20 +50,20 @@ const Section = () => {
       variants={containerVariants}
       initial='hidden'
       animate={inView ? "show" : "hidden"}
-      className='w-full h-full flex flex-col items-center py-8 gap-3'
+      className='w-full h-full overflow-hidden flex flex-col items-center md:py-8 py-2 gap-5'
     >
       <motion.div
-        className='flex flex-col justify-center max-w-[2000px] content-center gap-7 flex-nowrap'
+        className='flex flex-col justify-center max-w-[2000px] content-center gap-4 md:gap-7 flex-nowrap'
         variants={itemVariants}
       >
         <motion.div
-          className='text-center w-full max-w-[1600px] relative font-serif lg:text-9xl md:text-8xl text-6xl h-auto '
+          className='text-center w-full max-w-[1600px] relative font-magtis lg:text-9xl md:text-8xl text-7xl h-auto '
           variants={itemVariants}
         >
           <h1>Unviel Your Glow</h1>
         </motion.div>
         <motion.div
-          className='text-center text-2xl break-words whitespace-pre-wrap w-full'
+          className='text-center text-xl md:text-2xl break-words whitespace-pre-wrap w-full'
           variants={itemVariants}
         >
           <p>
@@ -73,7 +73,7 @@ const Section = () => {
           </p>
         </motion.div>
         <motion.div
-          className='flex items-center justify-center w-full h-min md:flex-row flex-col gap-5 flex-nowrap content-center'
+          className='flex items-center justify-center w-full h-min md:flex-row flex-col md:gap-5 gap-3 flex-nowrap content-center'
           variants={itemVariants}
         >
           <a
@@ -88,14 +88,17 @@ const Section = () => {
         </motion.div>
       </motion.div>
       <motion.div
-        className='relative w-full h-full justify-center items-center overflow-hidden'
+        className='relative w-full h-min justify-center items-center overflow-hidden'
         variants={itemVariants}
       >
-        <Ticker duration={20} className='z-0'>
+        <Ticker
+          duration={20}
+          className='z-0 flex w-min h-min gap-3 flex-row overflow-hidden relative content-center'
+        >
           {images.map((item, index) => (
             <div
               key={index}
-              className='aspect-square min-h-fit m-3 w-96 rounded-3xl bg-opacity-60 bg-white overflow-hidden'
+              className='aspect-square h-min w-96 m-3 rounded-3xl bg-opacity-60 bg-white overflow-hidden'
             >
               {item}
             </div>

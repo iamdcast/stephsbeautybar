@@ -3,10 +3,10 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className='w-[1729px] h-[1506.50px] px-[140px] py-5 flex-col justify-start items-start gap-2.5 inline-flex'>
+    <div className='md:flex md:justify-center md:items-center md:flex-row md:h-min md:gap-5 min-w-screen flex-shrink-0 '>
       <div className='self-stretch h-[1137.03px] flex-col justify-start items-start flex'>
         <div className='self-stretch h-[166px] py-10 flex-col justify-start items-start gap-2.5 flex'>
-          <div className='text-amber-50 text-[59.13019943237305px] font-light leading-10'>
+          <div className='text-amber-50 text-[59.13019943237305px] font-magtis leading-10'>
             Our Amazing Services
           </div>
         </div>

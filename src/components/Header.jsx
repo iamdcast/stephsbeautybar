@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       ref={ref}
-      className='md:flex md:justify-center md:items-center md:flex-row md:h-min md:gap-5 min-w-screen flex-shrink-0 '
+      className='flex justify-center items-center md:flex-row md:h-min md:gap-5 min-w-screen flex-shrink-0 '
     >
       <motion.div
         variants={containerVariants}
@@ -35,19 +35,19 @@ const Header = () => {
         animate={inView ? "show" : "hidden"}
         className='flex flex-grow justify-start items-center relative'
       >
-        <motion.div className='flex-grow' variants={itemVariants}>
+        <motion.div className='flex-grow ' variants={itemVariants}>
           <svg
             width='100%'
             height='100%'
-            viewBox='0 0 2000 200'
+            viewBox='0 0 2000 20'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
             <line
               x1='0'
-              y1='100'
+              y1='10'
               x2='100%'
-              y2='100'
+              y2='10'
               stroke='#F10E0E'
               strokeWidth={9}
             />
@@ -58,7 +58,7 @@ const Header = () => {
         variants={itemVariants}
         initial='hidden'
         animate={inView ? "show" : "hidden"}
-        className='flex items-center justify-center min-w-[200px] min-h-[78px] '
+        className='flex items-center justify-center md:min-w-[200px] md:min-h-[78px] min-w-[150px] h-auto '
       >
         <Image
           src='/Logo/STEPHSBEAUTYBAR.png'
@@ -74,19 +74,19 @@ const Header = () => {
         animate={inView ? "show" : "hidden"}
         className='flex flex-grow justify-end items-center relative'
       >
-        <motion.div className='flex-grow' variants={itemVariants}>
+        <motion.div className='flex-grow ' variants={itemVariants}>
           <svg
             width='100%'
             height='100%'
-            viewBox='0 0 2000 200'
+            viewBox='0 0 2000 20'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
             <line
               x1='0'
-              y1='100'
+              y1='10'
               x2='100%'
-              y2='100'
+              y2='10'
               stroke='#F10E0E'
               strokeWidth={9}
             />

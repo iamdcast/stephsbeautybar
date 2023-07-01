@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-barlow)"],
         serif: ["var(--font-bodoni)"],
+        magtis: ["var(--font-magtis)"],
       },
       colors: {
         primary: "#FFFEEE",

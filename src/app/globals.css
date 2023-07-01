@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Magtis";
+  src: url("/font/Magtis-ExtraBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-magtis: "Magtis", sans-serif;
+}
