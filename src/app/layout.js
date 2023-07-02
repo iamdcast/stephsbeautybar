@@ -8,7 +8,7 @@ const bodoni_moda = Bodoni_Moda({
 });
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-barlow",
 });

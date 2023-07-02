@@ -10,7 +10,7 @@ export default function Home() {
         <Section />
       </div>
 
-      <main className='flex min-h-screen flex-col items-center justify-between p-24 bg-secondary'>
+      <main className='flex min-h-screen flex-col items-center'>
         <Services />
       </main>
 
