@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Section from "@/components/Section";
 import Services from "@/components/Services";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
         <Section />
       </div>
 
-      <main className='flex min-h-screen flex-col items-center'>
+      <main className='flex min-h-screen h-min flex-col items-center'>
         <Services />
+        <Work />
       </main>
 
       <footer></footer>

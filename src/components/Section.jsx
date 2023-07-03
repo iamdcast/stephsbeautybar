@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Ticker from "framer-motion-ticker";
 import { useInView } from "react-intersection-observer";
+import { Link as ScrollLink } from "react-scroll";
 
 const imagesUrl = [
   "/ticker/IMG_5737.JPEG",
@@ -27,7 +28,7 @@ const images = imagesUrl.map((url, index) => (
 
 const Section = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const containerVariants = {
@@ -41,7 +42,7 @@ const Section = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 5 } },
+    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 3 } },
   };
 
   return (
@@ -82,9 +83,16 @@ const Section = () => {
           >
             Book Now
           </a>
-          <a className='btn btn-outline btn-block text-secondary md:btn-wide hover:bg-secondary hover:text-white hover:border-secondary font-normal'>
+          <ScrollLink
+            to='services'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className='btn btn-outline btn-block text-secondary md:btn-wide hover:bg-secondary hover:text-white hover:border-secondary font-normal'
+          >
             Our Services
-          </a>
+          </ScrollLink>
         </motion.div>
       </motion.div>
       <motion.div

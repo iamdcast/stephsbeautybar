@@ -5,12 +5,12 @@ import { useInView } from "react-intersection-observer";
 
 const Services = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const fadeIn = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 5 } },
+    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 3 } },
     exit: { opacity: 0, x: -100, transition: { duration: 0.2 } },
   };
 
@@ -30,11 +30,12 @@ const Services = () => {
 
   return (
     <motion.section
+      id='services'
       ref={ref}
       variants={containerVariants}
       initial='hidden'
       animate={inView ? "show" : "hidden"}
-      className='h-full w-full text-primary py-5 bg-secondary'
+      className='h-min min-h-screen w-full text-primary py-5 bg-secondary'
     >
       <motion.div
         ref={ref}
