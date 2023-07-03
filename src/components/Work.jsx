@@ -33,14 +33,14 @@ const Work = () => {
 
   return (
     <motion.div
-      className='relative grid grid-cols-1 md:grid-cols-2  lg:p-14 p-5 md:p-12  gap-4 content-center items-center w-full min-h-screen max-w-screen h-min'
+      className='relative grid grid-cols-1 md:grid-cols-2 lg:py-14 py-5 md:py-12 md:px-24 px-5 gap-4 content-center w-full min-h-screen max-w-screen h-min'
       ref={ref}
       variants={containerVariants}
       initial='hidden'
       animate={inView ? "show" : "hidden"}
     >
       <motion.h1
-        className='col-span-full text-center md:text-6xl text-4xl font-magtis mb-10 '
+        className='col-span-full w-full text-center md:text-6xl text-4xl font-magtis mb-10 '
         variants={itemVariants}
       >
         Stunning Transformations
@@ -48,7 +48,7 @@ const Work = () => {
       {images.map((image, index) => (
         <motion.div
           key={index}
-          className='relative aspect-square bg-cover bg-center rounded-3xl w-auto'
+          className='relative aspect-square bg-cover bg-center rounded-3xl  w-auto'
           style={{ backgroundImage: `url(${image})` }}
           variants={itemVariants}
         >

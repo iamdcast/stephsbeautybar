@@ -35,14 +35,14 @@ const Services = () => {
       variants={containerVariants}
       initial='hidden'
       animate={inView ? "show" : "hidden"}
-      className='h-min min-h-screen w-full text-primary py-5 bg-secondary'
+      className='h-min min-h-screen w-full text-primary py-5 bg-secondary md:px-24 px-5'
     >
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial='hidden'
         animate={inView ? "show" : "hidden"}
-        className=' box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center lg:p-14 p-5 md:p-12 relative content-start md:content-center flex-nowrap gap-10'
+        className=' box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center lg:py-14 py-5 md:py-12 relative content-start md:content-center flex-nowrap gap-10'
       >
         <motion.div
           variants={fadeIn}
