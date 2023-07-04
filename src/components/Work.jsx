@@ -5,10 +5,10 @@ import { useInView } from "react-intersection-observer";
 
 const Work = () => {
   const images = [
-    "/ticker/IMG_8375.JPEG",
-    "/ticker/IMG_8379.JPEG",
+    "/ticker/IMG_7926.JPEG",
+    "/ticker/IMG_7937.JPEG",
     "/ticker/IMG_8348.JPEG",
-    "/ticker/IMG_7945.JPEG",
+    "/ticker/IMG_8368.JPEG",
   ];
 
   const { ref, inView } = useInView({

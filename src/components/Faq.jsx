@@ -43,9 +43,9 @@ const Faq = () => {
         initial='hidden'
         animate={inView ? "show" : "hidden"}
       >
-        <motion.div className='h-full w-full flex'>
-          <motion.div className='h-min w-full max-w-6xl flex gap-5 flex-col md:flex-row '>
-            <div className='w-full flex flex-col justify-center font-sans'>
+        <motion.div className='h-full w-full flex items-center justify-center'>
+          <motion.div className='h-full w-full flex gap-5 max-w-5xl flex-col md:flex-row  '>
+            <div className='w-full flex flex-col font-sans'>
               <h4 className='text-2xl font-medium lg:text-3xl'>
                 How long do treatments take?
               </h4>

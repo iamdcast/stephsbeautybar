@@ -8,7 +8,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const imagesUrl = [
   "/ticker/IMG_7937.JPEG",
-  "/ticker/IMG_8348.JPEG",
+  "/ticker/252A8D79-9859-4FFA-A1D4-0A81860DB54D.jpeg",
   "/ticker/IMG_8978.JPEG",
   "/ticker/IMG_9526.jpeg",
   "/ticker/IMG_8368.JPEG",
