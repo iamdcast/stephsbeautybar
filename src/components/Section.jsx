@@ -7,11 +7,11 @@ import { useInView } from "react-intersection-observer";
 import { Link as ScrollLink } from "react-scroll";
 
 const imagesUrl = [
-  "/ticker/IMG_5737.JPEG",
-  "/ticker/582BBE61-E7F4-47A0-A2C4-6CB6F81948A8.JPEG",
-  "/ticker/IMG_5743.JPEG",
-  "/ticker/IMG_7923.JPEG",
-  "/ticker/IMG_8343.JPEG",
+  "/ticker/IMG_7937.JPEG",
+  "/ticker/IMG_8348.JPEG",
+  "/ticker/IMG_8978.JPEG",
+  "/ticker/IMG_9526.jpeg",
+  "/ticker/IMG_8368.JPEG",
 ];
 
 const maskShapes = [
@@ -21,14 +21,19 @@ const maskShapes = [
 ];
 
 const images = imagesUrl.map((url, index) => (
-  <div key={index} className='h-full w-full relative object-contain'>
-    <Image src={url} alt='Steph’s Beauty Bar Logo' fill />
+  <div key={index} className='h-full w-full relative'>
+    <Image
+      src={url}
+      alt='Steph’s Beauty Bar Logo'
+      fill
+      style={{ objectFit: "cover" }}
+    />
   </div>
 ));
 
 const Section = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   const containerVariants = {

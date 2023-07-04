@@ -12,7 +12,7 @@ const Work = () => {
   ];
 
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   const containerVariants = {
@@ -28,34 +28,38 @@ const Work = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 3 } },
+    show: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
   };
 
   return (
-    <motion.div
-      className='relative grid grid-cols-1 md:grid-cols-2 lg:py-14 py-5 md:py-12 md:px-24 px-5 gap-4 content-center w-full min-h-screen max-w-screen h-min'
-      ref={ref}
-      variants={containerVariants}
-      initial='hidden'
-      animate={inView ? "show" : "hidden"}
-    >
-      <motion.h1
-        className='col-span-full w-full text-center md:text-6xl text-4xl font-magtis mb-10 '
-        variants={itemVariants}
+    <motion.section className='md:h-screen  lg:py-14 py-5 md:py-12 md:px-24 px-5'>
+      <motion.div
+        className='relative flex flex-col gap-4 w-full h-full '
+        ref={ref}
+        variants={containerVariants}
+        initial='hidden'
+        animate={inView ? "show" : "hidden"}
       >
-        Stunning Transformations
-      </motion.h1>
-      {images.map((image, index) => (
-        <motion.div
-          key={index}
-          className='relative aspect-square bg-cover bg-center rounded-3xl  w-auto'
-          style={{ backgroundImage: `url(${image})` }}
+        <motion.h1
+          className='text-center md:text-6xl text-4xl font-magtis mb-10 '
           variants={itemVariants}
         >
-          <div className='absolute inset-0 bg-secondary opacity-[15%] rounded-3xl' />
-        </motion.div>
-      ))}
-    </motion.div>
+          Stunning Transformations
+        </motion.h1>
+        <div className='col-span-full gap-5 grid grid-col-1 md:grid-cols-2 grid-rows-[auto],auto,auto,auto] h-full'>
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              className='relative bg-cover bg-center w-full h-full aspect-square rounded-3xl'
+              style={{ backgroundImage: `url(${image})` }}
+              variants={itemVariants}
+            >
+              <div className='absolute inset-0 bg-secondary opacity-[15%] rounded-3xl' />
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </motion.section>
   );
 };
 
