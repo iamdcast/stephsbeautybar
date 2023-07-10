@@ -12,7 +12,7 @@ const Work = () => {
   ];
 
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const containerVariants = {

@@ -7,14 +7,14 @@ import { useInView } from "react-intersection-observer";
 
 const Header = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const containerVariants = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 5,
+        staggerChildren: 0.5,
       },
     },
   };

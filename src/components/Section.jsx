@@ -33,7 +33,7 @@ const images = imagesUrl.map((url, index) => (
 
 const Section = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const containerVariants = {

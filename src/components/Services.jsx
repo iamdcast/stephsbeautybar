@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const Services = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const fadeIn = {
@@ -39,22 +39,14 @@ const Services = () => {
     >
       <motion.div
         ref={ref}
-        variants={containerVariants}
-        initial='hidden'
-        animate={inView ? "show" : "hidden"}
+        variants={fadeIn} // changed this line
         className=' box-border flex-shrink-0 w-full h-min flex flex-col justify-center items-center lg:py-14 py-5 md:py-12 relative content-start md:content-center flex-nowrap gap-10'
       >
-        <motion.div
-          variants={fadeIn}
-          className=' flex-shrink-0 w-full h-auto whitespace-pre-wrap max-w-screen relative  md:text-6xl text-5xl font-magtis text-left'
-        >
+        <motion.div className=' flex-shrink-0 w-full h-auto whitespace-pre-wrap max-w-screen relative  md:text-6xl text-5xl font-magtis text-left'>
           <h1 className=''>Our Amazing Services</h1>
         </motion.div>
         <motion.div
-          ref={ref}
           variants={containerVariants}
-          initial='hidden'
-          animate={inView ? "show" : "hidden"}
           className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 font-sans'
         >
           <motion.div variants={fadeIn} className=''>
@@ -143,26 +135,26 @@ const Services = () => {
       </motion.div>
       <motion.div
         ref={ref}
-        variants={containerVariants}
+        variants={containerVariants} // applied containerVariants
         initial='hidden'
         animate={inView ? "show" : "hidden"}
         className='h-min py-10 flex-col justify-center items-center gap-2.5 flex lg:p-14 p-5 md:p-12'
       >
         <motion.div
-          variants={fadeIn}
+          variants={fadeIn} // applied fadeIn
           className='flex-shrink-0 w-full h-auto whitespace-pre-wrap max-w-screen relative  md:text-6xl text-5xl font-magtis text-center'
         >
           <h2 className=''>Ready Yet?</h2>
         </motion.div>
         <motion.span
-          variants={fadeIn}
+          variants={fadeIn} // applied fadeIn
           className='text-base font-light text-center '
         >
           Don’t wait another day to elevate your beauty game. <br />
           Book an appointment today and let the magic happen.
         </motion.span>
         <motion.div
-          variants={fadeIn}
+          variants={fadeIn} // applied fadeIn
           className='flex items-center justify-center w-full h-min md:flex-row flex-col my-5 flex-nowrap content-center'
         >
           <a
